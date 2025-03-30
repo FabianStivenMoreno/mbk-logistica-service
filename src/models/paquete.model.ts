@@ -6,6 +6,7 @@ class Paquete {
       public ancho: number,
       public profundidad: number,
       public tipoProducto: string,
+      public esDelicado: boolean,
       public envioId: number,
       public rutaId?: number
     ) {}
