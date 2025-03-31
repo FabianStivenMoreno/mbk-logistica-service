@@ -2,7 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
-import envioRoutes from './routes/envio.routes';
+import envioRoutes from './routes/envio/envio.routes';
 
 
 // Rutas
@@ -19,7 +19,7 @@ app.use(morgan('dev'));
 const raiz = process.env.ROOT_PATH || '/'
 
 // Configurar las rutas
-app.use(`${raiz}/`, envioRoutes);
+app.use(`${raiz}/envios`, envioRoutes);
 
 const port = process.env.PUERTO || 5000
 
