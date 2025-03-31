@@ -37,4 +37,4 @@ services:
 
 networks:
   coordinadora:
-    driver: bridge
+    external: true

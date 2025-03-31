@@ -50,6 +50,10 @@ Esta opción levanta el servicio junto con una instancia de Redis en contenedore
 
 ### ✅ **Requisitos previos**
 - Tener instalado [Docker](https://www.docker.com/) y [Docker Compose](https://docs.docker.com/compose/install/).
+- Si no se ha creado la red se debe crear red con docker ejecutando el siguiente comando
+```sh
+docker network create coordinadora
+```
 
 ### ▶ **1. Iniciar contenedores**
 ```sh
