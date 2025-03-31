@@ -6,7 +6,7 @@ const router = Router();
 
 router.get('/analitica', 
     AuthMiddleware.validarJWT,
-    AuthMiddleware.verificarRol(['admin', 'user']), 
+    AuthMiddleware.verificarRol(['admin']), 
     AnalitycsController.obtenerDatosAnaliticos);
 
 export default router;
