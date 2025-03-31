@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: logistica_service
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_USER=authService
+      - DB_PASS=Auth1234
+      - DB_NAME=prueba_coordinadora
+      - AUTH_URL=http://auth_service:3000/auth/v1/authenticate
+    depends_on:
+      - redis
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - coordinadora
+
+  redis:
+    image: "redis:7"
+    container_name: redis-server
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+    networks:
+      - coordinadora
+
+networks:
+  coordinadora:
+    driver: bridge
