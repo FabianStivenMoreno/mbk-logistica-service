@@ -134,6 +134,7 @@ http://localhost:3000/api-docs
 - Si cambias los valores de conexión a la base de datos en `.env`, actualiza tu configuración en `docker-compose.yml` si usas Docker.
 - Para depuración, usa `docker-compose logs -f` o `docker logs -f auth_service`.
 - Para correr este proyecto es prerequisito descargar y levantar [mbk-logistica-service](https://github.com/FabianStivenMoreno/mbk-auth-service) 
+- VIDEO [Explicacion flujo](https://www.youtube.com/watch?v=Ggi6Lpt99ME)
 
 ---
 
