@@ -10,12 +10,12 @@ describe('LoggerService', () => {
         jest.restoreAllMocks();
     });
 
-    test('Debería loggerse un log del nivel info', () => {
-        logger.debug('Test info message');
+    test('Debería loggearse un log del nivel info', () => {
+        logger.info('Test info message');
         expect(logger.info).toHaveBeenCalledWith('Test info message');
     });
 
-    test('Debería loggerse un log del nivel error', () => {
+    test('Debería loggearse un log del nivel error', () => {
         logger.error('Test error message');
         expect(logger.error).toHaveBeenCalledWith('Test error message');
     });

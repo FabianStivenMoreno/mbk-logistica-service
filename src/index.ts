@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
 import envioRoutes from './routes/envio/envio.routes';
+import analitycsRoutes from './routes/analitycs/analitycs.routes'
 
 
 // Rutas
@@ -20,6 +21,7 @@ const raiz = process.env.ROOT_PATH || '/'
 
 // Configurar las rutas
 app.use(`${raiz}/envios`, envioRoutes);
+app.use(`${raiz}/datos`, analitycsRoutes);
 
 const port = process.env.PUERTO || 5000
 
