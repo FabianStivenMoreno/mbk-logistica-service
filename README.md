@@ -25,8 +25,8 @@ NODE_ENV=dev
 # Configuración del servidor SMTP (para notificaciones por correo)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=logisticanoreply@gmail.com
-SMTP_PASS=jznn rrwf xugk ofvx
+SMTP_USER= logisticanoreply@gmail.com
+SMTP_PASS=cualquierPass
 SMTP_FROM="Logistica" logisticanoreply@gmail.com
 
 # Base de datos
