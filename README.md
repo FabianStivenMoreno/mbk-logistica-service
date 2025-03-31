@@ -68,7 +68,7 @@ docker logs -f logistica_service
 ### ▶ **3. Acceder a la API**
 El servicio estará disponible en:
 - 🔗 **http://localhost:3000/logistica/v1**
-- 🔗 **Documentación Swagger:** [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+- En la carpeta docs hay una colección para probar desde postman los endpoints desarrollados
 
 ### ▶ **4. Detener y eliminar contenedores**
 ```sh
@@ -123,15 +123,6 @@ Ejecuta los tests con:
 ```sh
 npm run test
 ```
-
----
-
-## 📖 **Documentación API**
-La documentación OpenAPI se genera automáticamente y se puede acceder en:
-```sh
-http://localhost:3000/api-docs
-```
-
 ---
 
 ### 📌 **Notas adicionales**
