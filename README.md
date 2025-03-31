@@ -22,6 +22,13 @@ ROOT_PATH=/logistica/v1
 LOGGER_LEVEL=debug
 NODE_ENV=dev
 
+# Configuración del servidor SMTP (para notificaciones por correo)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=logisticanoreply@gmail.com
+SMTP_PASS=jznn rrwf xugk ofvx
+SMTP_FROM="Logistica" logisticanoreply@gmail.com
+
 # Base de datos
 DB_HOST=localhost
 DB_PORT=3306
@@ -29,8 +36,11 @@ DB_USER=root
 DB_PASS=tu_contraseña
 DB_NAME=prueba_coordinadora
 
-# JWT
-JWT_SECRET=supersecreto
+
+#Configuracion de REDIS
+REDIS_HOST=0.0.0.0
+REDIS_PORT=6379
+
 ```
 
 ---
@@ -83,7 +93,11 @@ Verifica que MySQL esté ejecutándose y crea la base de datos manualmente:
 CREATE DATABASE prueba_coordinadora;
 ```
 
-### ▶ **3. Compilar TypeScript**
+### ▶ **3. Asegurar que Redis esté corriendo localmente**
+Verifica que MySQL esté ejecutándose y crea la base de datos manualmente:
+
+
+### ▶ **4. Compilar TypeScript**
 ```sh
 npm run build
 ```
